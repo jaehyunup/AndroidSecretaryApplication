@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baselayout"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/radius_bg">
+
+        <LinearLayout
+            android:id="@+id/searchbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            app:layout_scrollFlags="scroll">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/searchtext"
+                    android:layout_width="287dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_text_bg"
+                    android:fontFamily="@font/nanumgothic"
+                    android:inputType="textPersonName"
+                    android:text="목적지 검색"
+                    android:textColor="#BDBDBD"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/mapfragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ButtonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:background="@drawable/radius_bg"
+        android:padding="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="80dp"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/selectpath"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_bg"
+                android:drawableTop="@drawable/ic_sharp_call_split_24px"
+                android:fontFamily="@font/nanumgothic"
+                android:paddingTop="8dp"
+                android:text="추천경로"
+                android:textColor="#808080"
+                android:textSize="12sp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/SubwayOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_bg"
+                android:drawableTop="@drawable/ic_sharp_directions_subway_24px"
+                android:fontFamily="@font/nanumgothic"
+                android:paddingTop="8dp"
+                android:text="지하철만"
+                android:textColor="#808080"
+                android:textSize="12sp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/BusOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_bg"
+                android:drawableTop="@drawable/ic_sharp_directions_bus_24px"
+                android:fontFamily="@font/nanumgothic"
+                android:paddingTop="8dp"
+                android:text="버스만"
+                android:textColor="#808080"
+                android:textSize="12sp">
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/allpath"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_bg"
+                android:drawableTop="@drawable/ic_sharp_directions_24px"
+                android:fontFamily="@font/nanumgothic"
+                android:paddingTop="8dp"
+                android:text="버스+지하철"
+                android:textColor="#808080"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PathFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sharp_drag_handle_24px"
+        app:backgroundTint="#4CAF50"
+        app:fabCustomSize="24dp"
+        app:layout_anchor="@+id/ButtonGrid"
+        app:layout_anchorGravity="top|center"
+        app:rippleColor="#00000000" />
+
+
+</android.support.design.widget.CoordinatorLayout>

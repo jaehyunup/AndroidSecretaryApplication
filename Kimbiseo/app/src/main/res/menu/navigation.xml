@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_time_table"
+        android:icon="@drawable/calendar"
+        android:title="@string/title_time_table" />
+
+    <item
+        android:id="@+id/navigation_route"
+        android:icon="@drawable/location"
+        android:title="@string/title_route" />
+    <item
+        android:id="@+id/navigation_community"
+        android:icon="@drawable/edit"
+        android:title="@string/title_community" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/settings"
+        android:title="@string/title_setting" />
+
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insert_table2"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학교명"/>
+
+    <EditText
+        android:id="@+id/edit_uni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="학교 이름을 입력해주세요"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="등교 준비 시간(분)"/>
+
+    <EditText
+        android:id="@+id/edit_ready"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="등교를 준비하는데 걸리는 시간을 입력해주세요"
+        android:inputType="number"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:id="@+id/btnOK"/>
+
+</LinearLayout>

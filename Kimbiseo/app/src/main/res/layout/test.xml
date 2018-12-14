@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:id="@+id/pathresultTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_listbg"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nanumgothicbold"
+                        android:text="24분"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/nanumgothic"
+                        android:paddingLeft="6dp"
+                        android:text="(6.9 km)"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/SemiPath"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nanumgothic"
+                        android:paddingTop="4dp"
+                        android:text="버스 + 지하철"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/pathinfobutton"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_bluebutton"
+                        android:drawableRight="@drawable/ic_sharp_navigate_next_24px"
+                        android:fontFamily="@font/nanumgothicbold"
+                        android:text="경로 정보"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+
+                    <Button
+                        android:id="@+id/searchthisPath"
+                        android:layout_width="60dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_greenbutton"
+                        android:drawableRight="@drawable/ic_sharp_navigate_next_24px"
+                        android:fontFamily="@font/nanumgothicbold"
+                        android:text="안내 시작"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

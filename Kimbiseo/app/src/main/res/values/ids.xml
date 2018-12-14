@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="findPwDialogClassName" type="id" />
+    <item name="findPwDialogClassNum" type="id" />
+    <item name="findPwDialogCancel" type="id" />
+    <item name="findPwDialogok" type="id" />
+</resources>

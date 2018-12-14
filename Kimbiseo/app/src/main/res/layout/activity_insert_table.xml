@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:id="@+id/time_table"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".odsayapitest.mainPackage.MainPage"
+    android:orientation="vertical">
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:id="@+id/monday"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:text="MON"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tuesday"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:text="TUE"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/wednesday"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:text="WED"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/thursday"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:text="THU"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/friday"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:text="FRI"
+            android:gravity="center" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1"
+        android:layout_width="wrap_content">
+
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  09:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_1"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/checkbox_stroke"
+            android:button="@android:drawable/list_selector_background"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_1"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/checkbox_stroke"
+            android:button="@android:drawable/list_selector_background"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_1"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_1"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_1"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  10:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_2"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_2"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_2"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_2"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_2"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  11:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_3"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_3"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_3"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_3"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_3"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  12:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_4"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_4"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_4"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_4"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_4"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  13:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_5"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_5"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_5"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_5"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_5"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/six"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  14:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_6"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_6"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_6"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_6"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_6"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  15:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_7"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_7"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_7"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_7"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_7"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_weight = "1" >
+
+        <TextView
+            android:id="@+id/eight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="  16:00  "
+            android:gravity="center" />
+
+        <CheckBox
+            android:id="@+id/mon_8"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/tue_8"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/wed_8"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/thu_8"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+        <CheckBox
+            android:id="@+id/fri_8"
+            android:layout_width="69.5dp"
+            android:layout_height="match_parent"
+            android:button="@android:drawable/list_selector_background"
+            android:background="@drawable/checkbox_stroke"
+            android:gravity="center"
+            android:text="@string/space" />
+
+    </TableRow>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnInsertData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="시간표 입력" />
+
+        <Button
+            android:id="@+id/btnDeleteData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="시간표 삭제" />
+
+        <Button
+            android:id="@+id/MakeDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="등록끝" />
+    </LinearLayout>
+
+</TableLayout>
+
+
