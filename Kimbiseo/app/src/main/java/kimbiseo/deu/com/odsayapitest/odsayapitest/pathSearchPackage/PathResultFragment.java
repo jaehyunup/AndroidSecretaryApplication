@@ -47,14 +47,10 @@ public class PathResultFragment extends Fragment{
         public PathResultFragment() {
             // Required empty public constructor
         }
-
-
         public interface PathResultFragmentListener {
             void onClicked(View v);
             // onCliked , 콜백으로서 엑티비티에서 구현한다. 이벤트는 프라그먼트에서 터트림
         }
-
-
 
 
     @Override
@@ -62,19 +58,13 @@ public class PathResultFragment extends Fragment{
                                  Bundle savedInstanceState) {
             LinearLayout layout = (LinearLayout)inflater.inflate(R.layout.pathresult_fragment,container,false);
             tableLayout=(TableLayout)layout.findViewById(R.id.pathresultTable); // 테이블 레이아웃
-
-
             try {
                 MakePathinfoTable();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
             return layout;
-
         }
-
 
 
     @Override
@@ -208,11 +198,9 @@ public class PathResultFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 whatbutton=count;
-
                 Intent intent=new Intent(getActivity(),infoView.class);
                 for(int i=0;i<onoffList.get(whatbutton).size();i++) {
                    intent.putExtra("SubPathList",onoffList.get(whatbutton));
-
                 }
                 startActivity(intent);
             }
@@ -225,7 +213,6 @@ public class PathResultFragment extends Fragment{
        searchPath.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-
            }
        });
     }
@@ -233,15 +220,12 @@ public class PathResultFragment extends Fragment{
     private void MakePathinfoTable() throws JSONException {
         for (int rowcount = 0; rowcount < DataSingleton.INSTANCE.BigPathTotal.size(); rowcount++) {
             ArrayList<String> temponoffList=new ArrayList<String>();
-
             JSONObject PathObject=DataSingleton.INSTANCE.BigPathTotal.get(rowcount);
             // 데이터 클래스에 있는 이동타입이 버스와 지하철이 섞인 경로가 들어있는 JSONObject를 받음.
             // 데이터 클래스에 존재하는 BigPathBus 라는 어레이리스트의 인덱스에 각 경로가 들어있다.
             // 그러므로 for문을 이용하여 모든 경로에 대한 데이터를 수집시작.
-
             JSONObject infoObject=PathObject.getJSONObject("info");
             // 경로 오브젝트에는 info라는 오브젝트가 존재하고, 그안에 해당 경로에 관한 정보가 담겨있다
-
             String totalTime=infoObject.getString("totalTime"); // 경로에 걸리는 시간 정보
             String totalDistance=infoObject.getString("totalDistance"); // 경로의 총 이동거리
             String firstStartStation=infoObject.getString("firstStartStation"); // 시작 첫 정류장
@@ -249,22 +233,18 @@ public class PathResultFragment extends Fragment{
             String payment=infoObject.getString("payment"); // 요금
             String mapObj=infoObject.getString("mapObj"); // 맵오브젝트 ( 네이버 맵에 뿌려줄 좌표값의 보간점 )
             JSONArray subPath=PathObject.getJSONArray("subPath");
-
             for (int i = 0; i < subPath.length(); i++) {// SubPath 개수만큼.
                 //서브 패스의 인덱스 개수만큼, 서브패스 각인덱스에는 Jsonarray가 있다.
                 JSONObject SubPathObject=subPath.getJSONObject(i);
-
                 if (SubPathObject.getString("trafficType").equals("1")) { // 지하철 일때
                     JSONArray laneArray=SubPathObject.getJSONArray("lane");// 노선 들어있는 어레이
                     JSONObject stopList=SubPathObject.getJSONObject("passStopList"); // 정류장 들어있는 오브젝트
                     JSONArray stationList=stopList.getJSONArray("stations"); // 거쳐야할 정류장 리스트어레이.
-
                     /*하위의 JsonArray[lane] 에 타야할 지하철 번호가 나옴
                      * 하위의 JsonObject passStopList -> JsonArray[Jsonobject] stations ->에 해당 이동수단의 정류장  */
                     String startname=SubPathObject.getString("startName")+"역-> "; // 승차역 이름
                     String laneway=SubPathObject.getString("way")+"방면\n";
                     String lanename=laneArray.getJSONObject(0).getString("name")+"승차"; // 노선이름(부산 2호선)
-
                     String lanewayname=startname+laneway+lanename;
                     temponoffList.add(lanewayname);
                     String stationString="";
@@ -273,33 +253,27 @@ public class PathResultFragment extends Fragment{
                                 .toString()+"ᚔ"; // 정류장 번호
                     }
                     temponoffList.add(stationString);
-
                     String endname=SubPathObject.getString("endName")+" 하차"; // 하차역 이름
                     temponoffList.add(endname);
                 } else if (SubPathObject.getString("trafficType").equals("2")) { // 버스 일때
                     JSONArray laneArray=SubPathObject.getJSONArray("lane");// 노선 들어있는 어레이
                     JSONObject stopList=SubPathObject.getJSONObject("passStopList"); // 정류장 들어있는 오브젝트
                     JSONArray stationList=stopList.getJSONArray("stations"); // 거쳐야할 정류장 리스트어레이.
-
                     String startname=SubPathObject.getString("startName")+" 정류장->"; // 승차역 이름
                     String lanename=laneArray.getJSONObject(0).getString("busNo")+" 승차"; // 노선이름(부산 2호선)
                     String startnamelane=startname+lanename; // 정류장 및 승차 합치기.
                     temponoffList.add(startnamelane);
-
                     String stationString="";
                     for(int v=0;v<stationList.length();v++){ // 정류장 리스트 뽑기
                         stationString=stationString+stationList.getJSONObject(v).getString("stationName")
                                 .toString()+"ᚔ"; // 정류장 번호
                     }
                     temponoffList.add(stationString);
-
                     String endname=SubPathObject.getString("endName")+" 하차"; // 하차역 이름
                     temponoffList.add(endname);
-
                 } else if (SubPathObject.getString("trafficType").equals("3")) { // 도보 일때
                     String footdistance=SubPathObject.getString("distance")+"미터 도보 이동";
                     temponoffList.add(footdistance);
-
                 }
             }
             // onoffList 의 승하차 정보를 차례대로 뽑는다

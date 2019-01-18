@@ -54,7 +54,9 @@ public class MapFragment extends Fragment {
             Double.parseDouble(DataSingleton.INSTANCE.stopPointy));
     private int markerid;
 
-    private static final String CLIENT_ID = "Vu5S2v0PiQrxi9MpG4Oh";// 애플리케이션 클라이언트 아이디 값
+    /*아래에 네이버 클라이언트 아이디 꼭 넣어야 함*/
+    private static final String CLIENT_ID = "YOUR_CLIENT_ID";// 애플리케이션 클라이언트 아이디 값 지정
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.map_fragment, container, false);
@@ -356,7 +358,7 @@ public class MapFragment extends Fragment {
         // 출, 도착지 Xy를 찍는다
         // set path data points
         ArrayList<NGeoPoint> mapObj=DataSingleton.INSTANCE.PathMapObj; // 데이터싱글턴에서 해당 값 다받아오기
-        NMapPathData pathData = new NMapPathData(mapObj.size()+1); // 출발,도착 좌표는 따로찍는다.따라서 +2
+        NMapPathData pathData = new NMapPathData(mapObj.size()); // 출발,도착 좌표는 따로찍는다.따라서 +2
         pathData.initPathData();
 
         pathData.addPathPoint(myLocation.longitude,myLocation.latitude, NMapPathLineStyle.TYPE_DASH);

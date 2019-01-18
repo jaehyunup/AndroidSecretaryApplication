@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">김비서</string>
 
-    <string name="secret">yyECjAo8Am</string>
-    <string name="space">" "</string>
 
+    <string name="ODSAY_API_KEY">"YOUR_ODSAY_API_KEY"</string>
+
+
+    <string name="space">" "</string>
     <string name="title_time_table">시간표</string>
     <string name="title_route">경로 안내</string>
     <string name="title_community">메모장</string>

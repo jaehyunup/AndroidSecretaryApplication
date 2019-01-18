@@ -93,7 +93,8 @@ public class PathMainActivity extends FragmentActivity {
 
 
         /* ODsay 서비스 초기화된계, 객체 생성 및 서버와의 연결 제한,데이터 획득 제한 시간을 설정한다 */
-        odsayService = ODsayService.init(this, "aacboAGWZuvOGtobeow0qGNHkakZHU14IuMLtbk6yeQ");
+        odsayService = ODsayService.init(this, this.getResources().getString(R.string.ODSAY_API_KEY));
+
         ///‘ODsayService’ 객체 생성.
         odsayService.setConnectionTimeout(5000);        //서버 연결 제한 시간 설정.
         odsayService.setReadTimeout(5000);        //데이터 획득 제한 시간 설정
